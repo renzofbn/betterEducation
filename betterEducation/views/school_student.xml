@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <!--  Vista Principal -->
+  <record id="school_student_view" model="ir.actions.act_window">
+    <field name="name">Estudiantes</field>
+    <field name="type">ir.actions.act_window</field>
+    <field name="res_model">school.student</field>
+    <field name="view_mode">tree,form</field>
+    <field name="help" type="html">
+        <p class="o_view_nocontent_smiling_face">
+          Baia, una escuela sin estudiantes :(
+        </p>
+        <p>
+          Agrega a tu primer estudiante !!!
+        </p>
+    </field>
+  </record>
+
+  <!--  Vista tree, para mostrar datos -->
+  <record id="school_student_tree" model="ir.ui.view">
+    <field name="name">school.student.tree</field>
+    <field name="model">school.student</field>
+    <field name="arch" type="xml">
+      <tree>
+          <field name="name" string="Nombre del estudiante"/>
+          <field name="age" string="Edad"/>
+          <field name="final_exam_grade" string="Nota Final"/>
+      </tree>
+    </field>
+  </record>
+
+  <!--  Vista search, para agregar filtros -->
+  <record id="school_student_search" model="ir.ui.view">
+    <field name="name">school.student.search</field>
+    <field name="model">school.student</field>
+    <field name="arch" type="xml">
+      <search>
+        <filter name="filter_passed" string="Estudiantes aprobados" domain="[('final_exam_grade', '>=', 10.5)]"/>
+        <filter name="filter_passed" string="Estudiantes desaprobados" domain="[('final_exam_grade', '&lt;=', 10.4)]"/>
+      </search>
+    </field>
+  </record>
+
+  <!--  Vista form, para agregar o editar datos -->
+  <record id="school_student_form" model="ir.ui.view">
+    <field name="name">school.student.form</field>
+    <field name="model">school.student</field>
+    <field name="arch" type="xml">
+      <form>
+        <sheet>
+          <group>
+            <group>
+              <field name="name"/>
+              <field name="birth_date"/> 
+              <field name="age"/>
+              <field name="final_exam_grade"/>
+            </group>
+            <notebook>
+                <page string="Inscribir en Cursos">
+                  <field name="subject_ids"/>
+                </page>
+            </notebook>
+          </group>
+        </sheet>
+        <!-- Sección del mail module -->
+        <div class="oe_chatter">
+          <field name="message_follower_ids" groups="base.group_user"/>
+          <field name="activity_ids"/>
+          <field name="message_ids"/>
+        </div>
+      </form>
+    </field>
+  </record>
+
+</odoo>

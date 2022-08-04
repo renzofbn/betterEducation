@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <!--  Vista Básica para habilitar el menu principal -->
+  <record id="education_root_menu_view" model="ir.actions.act_window">
+    <!-- TODO Crear una mejor interfaz principal -->
+    <field name="name">Esta es una accion de prueba para hacer visible el menu principal</field>
+    <field name="view_mode">tree</field>
+  </record>
+</odoo>
