@@ -11,11 +11,11 @@
         <field name="name">Staff</field>
         <field name="category_id" ref="betterEducation.school_management" />
         <field
-        name="implied_ids"
-        eval="[(6, 0, [ref('base.group_private_addresses'), ref('base.group_user')])]"
+      name="implied_ids"
+      eval="[(6, 0, [ref('base.group_private_addresses'), ref('base.group_user')])]"
     />
     <field
-        name="comment"
+      name="comment"
     >El usuario sera capaz de crear y eliminar nuevos datos al modulo</field>
     </record>
 </odoo>

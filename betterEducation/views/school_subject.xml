@@ -61,7 +61,7 @@
             <group>
               <field name="name" />
               <field name="credits" />
-              <field name="max_students" /> 
+              <field name="max_students" />
               <field name="active" />
             </group>
             <notebook>

@@ -7,7 +7,7 @@
     sequence="0"
     action="school_student_view"
     web_icon="betterEducation,static/description/icon.png"
-/>
+  />
         <!-- Estudiantes -->
         <menuitem
     name="Estudiantes"

@@ -15,4 +15,3 @@ class Teacher(models.Model):
     subject_ids = fields.One2many(
         "school.subject", "teacher_id", string="Cursos", tracking=True
     )
-

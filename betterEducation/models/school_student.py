@@ -14,7 +14,6 @@ class Student(models.Model):
     age = fields.Integer(compute="_compute_age", string="Edad", readonly=True)
     final_exam_grade = fields.Float(string="Nota final", required=True, tracking=True)
     subject_ids = fields.Many2many("school.subject", string="Cursos", tracking=True) 
-    
 
     @api.depends("birth_date")
     def _compute_age(self):
@@ -41,7 +40,7 @@ class Student(models.Model):
                 )
             else:
                 record.age = 0
-    
+
     @api.constrains("birth_date")
     def check_birth_date(self):
         """

@@ -59,7 +59,7 @@
           <group>
             <group>
               <field name="name" />
-              <field name="birth_date" /> 
+              <field name="birth_date" />
               <field name="age" />
               <field name="final_exam_grade" />
             </group>
@@ -79,5 +79,4 @@
       </form>
     </field>
   </record>
-
 </odoo>
