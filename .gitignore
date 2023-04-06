@@ -72,3 +72,8 @@ docs/_build/
 
 # OCA rules
 !static/lib/
+
+setup/.setuptools-odoo-make-default-ignore
+setup/README
+setup/betterEducation/odoo/addons/betterEducation
+setup/betterEducation/setup.py
