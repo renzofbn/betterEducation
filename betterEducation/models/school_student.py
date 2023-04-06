@@ -5,6 +5,7 @@ class Student(models.Model):
     """
     Clase Student parte del modulo education, crea el modelo school_student
     """
+
     _name = "school.student"
     _inherit = ["mail.thread", "mail.activity.mixin"]  # Modelos de mail
     _description = "Datos del estudiante"
@@ -13,7 +14,7 @@ class Student(models.Model):
     birth_date = fields.Date(string="Fecha de nacimiento", required=True, tracking=True)
     age = fields.Integer(compute="_compute_age", string="Edad", readonly=True)
     final_exam_grade = fields.Float(string="Nota final", required=True, tracking=True)
-    subject_ids = fields.Many2many("school.subject", string="Cursos", tracking=True) 
+    subject_ids = fields.Many2many("school.subject", string="Cursos", tracking=True)
 
     @api.depends("birth_date")
     def _compute_age(self):
