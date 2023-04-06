@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <odoo>
     <!--Categoria del grupo-->
     <record model="ir.module.category" id="school_management">
@@ -9,8 +9,13 @@
     <!--Nombre del grupo-->
     <record id="group_staff_school" model="res.groups">
         <field name="name">Staff</field>
-        <field name="category_id" ref="betterEducation.school_management"/>
-        <field name="implied_ids" eval="[(6, 0, [ref('base.group_private_addresses'), ref('base.group_user')])]"/>
-    <field name="comment">El usuario sera capaz de crear y eliminar nuevos datos al modulo</field>
+        <field name="category_id" ref="betterEducation.school_management" />
+        <field 
+            name="implied_ids" 
+            eval="[(6, 0, [ref('base.group_private_addresses'), ref('base.group_user')])]"
+        />
+    <field 
+    name="comment"
+    >El usuario sera capaz de crear y eliminar nuevos datos al modulo</field>
     </record>
 </odoo>

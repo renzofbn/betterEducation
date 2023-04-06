@@ -7,14 +7,20 @@ class Subject(models.Model):
     """
     _name = "school.subject"
     _description = "Detalles del curso"
-    _inherit = ["mail.thread", "mail.activity.mixin"]   # Modelos de mail
+    _inherit = ["mail.thread", "mail.activity.mixin"]  # Modelos de mail
 
     name = fields.Char(string="Nombre del curso", required=True, tracking=True)
     credits = fields.Integer(string="Creditos del curso", required=True, tracking=True)
-    max_students = fields.Integer(string="Maximo de estudiantes", required=True, tracking=True)
+    max_students = fields.Integer(
+        string="Maximo de estudiantes", required=True, tracking=True
+    )
     active = fields.Boolean(string="Activo", default=True, required=True, tracking=True)
-    student_ids = fields.Many2many("school.student", string="Estudiantes", required=True, tracking=True)
-    teacher_id = fields.Many2one("school.teacher", string="Profesor", required=True, tracking=True)
+    student_ids = fields.Many2many(
+        "school.student", string="Estudiantes", required=True, tracking=True
+    )
+    teacher_id = fields.Many2one(
+        "school.teacher", string="Profesor", required=True, tracking=True
+    )
 
     @api.constrains("credits")
     def check_credits(self):
@@ -32,6 +38,6 @@ class Subject(models.Model):
         """
         for record in self:
             if record.max_students < 0:
-                raise models.ValidationError("La cantidad de alumnos no puede ser negativa")
-
-
+                raise models.ValidationError(
+                    "La cantidad de alumnos no puede ser negativa"
+                )
