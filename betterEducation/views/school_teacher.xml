@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
   <!--  Vista Principal -->
   <record id="school_teacher_view" model="ir.actions.act_window">
@@ -22,8 +22,8 @@
     <field name="model">school.teacher</field>
     <field name="arch" type="xml">
       <tree>
-          <field name="name" string="Nombre del profesor"/>
-          <field name="profile" string="Perfil"/>
+          <field name="name" string="Nombre del profesor" />
+          <field name="profile" string="Perfil" />
       </tree>
     </field>
   </record>
@@ -37,8 +37,8 @@
         <sheet>
           <group>
             <group>
-              <field name="name"/>
-              <field name="profile"/> 
+              <field name="name" />
+              <field name="profile" /> 
             </group>
             <notebook>
                 <page string="Agregar a Curso">
@@ -49,9 +49,9 @@
         </sheet>
           <!--  Sección del mail module -->
         <div class="oe_chatter">
-          <field name="message_follower_ids" groups="base.group_user"/>
-          <field name="activity_ids"/>
-          <field name="message_ids"/>
+          <field name="message_follower_ids" groups="base.group_user" />
+          <field name="activity_ids" />
+          <field name="message_ids" />
         </div>
       </form>
     </field>

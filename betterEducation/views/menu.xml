@@ -1,16 +1,49 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
         <!-- Menu Principal -->
-        <menuitem name="Mi Escuela" id="education_root_menu" sequence="0" action='school_student_view' web_icon="betterEducation,static/description/icon.png"/>
+        <menuitem
+    name="Mi Escuela"
+    id="education_root_menu"
+    sequence="0"
+    action="school_student_view"
+    web_icon="betterEducation,static/description/icon.png"
+/>
         <!-- Estudiantes -->
-        <menuitem name="Estudiantes" id="stundent_menu" parent="education_root_menu"/>
-        <menuitem name="Gestionar Estudiantes" id="view_student_menu" parent="stundent_menu" action='school_student_view' />
+        <menuitem
+    name="Estudiantes"
+    id="stundent_menu"
+    parent="education_root_menu"
+  />
+        <menuitem
+    name="Gestionar Estudiantes"
+    id="view_student_menu"
+    parent="stundent_menu"
+    action="school_student_view"
+  />
 
         <!-- Profesores -->
-        <menuitem name="Profesores" id="teacher_menu" parent="education_root_menu"/>
-        <menuitem name="Gestionar Profesores" id="view_teacher_menu" parent="teacher_menu" action='school_teacher_view' />
+        <menuitem
+    name="Profesores"
+    id="teacher_menu"
+    parent="education_root_menu"
+  />
+        <menuitem
+    name="Gestionar Profesores"
+    id="view_teacher_menu"
+    parent="teacher_menu"
+    action="school_teacher_view"
+  />
 
         <!-- Cursos -->
-        <menuitem name="Cursos" id="subject_menu" parent="education_root_menu"/>
-        <menuitem name="Gestionar Cursos" id="view_subject_menu" parent="subject_menu" action='school_subject_view' />
+        <menuitem
+    name="Cursos"
+    id="subject_menu"
+    parent="education_root_menu"
+  />
+        <menuitem
+    name="Gestionar Cursos"
+    id="view_subject_menu"
+    parent="subject_menu"
+    action="school_subject_view"
+  />
 </odoo>

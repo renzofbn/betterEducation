@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 {
     "name": "betterEducation",
     "version": "14.0.1.0.0",
@@ -17,10 +16,8 @@
         "views/school_teacher.xml",
         "views/school_subject.xml",
         "views/menu.xml",
-
     ],
     "installable": True,
     "application": True,
     "auto_install": False,
 }
-

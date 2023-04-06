@@ -5,6 +5,7 @@ class Subject(models.Model):
     """
     Clase Subject parte del modulo education, crea el modelo school_subject
     """
+    
     _name = "school.subject"
     _description = "Detalles del curso"
     _inherit = ["mail.thread", "mail.activity.mixin"]  # Modelos de mail

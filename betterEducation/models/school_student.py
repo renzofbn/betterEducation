@@ -15,6 +15,7 @@ class Student(models.Model):
     final_exam_grade = fields.Float(string="Nota final", required=True, tracking=True)
     subject_ids = fields.Many2many("school.subject", string="Cursos", tracking=True) 
     
+
     @api.depends("birth_date")
     def _compute_age(self):
         """
@@ -35,13 +36,12 @@ class Student(models.Model):
                     > (
                         fields.Date.from_string(fields.Date.today()).month,
                         fields.Date.from_string(fields.Date.today()).day,
-                    ) 
+                    )
                     else 0
                 )
             else:
                 record.age = 0
     
-
     @api.constrains("birth_date")
     def check_birth_date(self):
         """
@@ -52,7 +52,6 @@ class Student(models.Model):
             if record.age < 3:
                 raise models.ValidationError("El estudiante debe tener 3 años o mas")
 
-
     @api.constrains("final_exam_grade")
     def check_final_grade(self):
         """
@@ -61,4 +60,3 @@ class Student(models.Model):
         for record in self:
             if record.final_exam_grade < 0 or record.final_exam_grade > 20:
                 raise models.ValidationError("La nota final debe estar entre 0 y 20")
-                
