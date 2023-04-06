@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'betterEducation',
-    'version': '0.9',
+    'version': '14.0.1.0.0',
     'summary': 'Gestiona los datos de tu escuela en solo lugar',
     'description': "beta",
     'author': "Renzo Valentin",
