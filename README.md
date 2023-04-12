@@ -10,3 +10,6 @@ Esta es una prueba de codecov
 [![Build Status](https://github.com/renzofbn/betterEducation/actions/workflows/test.yml/badge.svg?branch=14.0)](https://github.com/renzofbn/betterEducation/actions/workflows/test.yml?query=branch%3A14.0)
 
 [![codecov](https://codecov.io/gh/renzofbn/betterEducation/branch/14.0/graph/badge.svg)](https://codecov.io/gh/renzofbn/betterEducation)
+
+
+Este es un nuevo commit de prueba para una build
